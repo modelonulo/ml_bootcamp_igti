@@ -1,0 +1,116 @@
+
+Questionário
+
+Pergunta 01: Qual métrica de qualidade você considera a mais importante para medir o desempenho do seu algoritmo de classificação?
+
+    Acurácia - erros diferentes tem peso igual
+    Recall - não podemos deixar de classificar nenhum número
+    Precisão - falsos positivos são inaceitáveis
+    F-Score - entre recall e f-score há igual importância
+
+Pergunta 02: Suponha que seu contratante lhe deu 5000 exemplos de números que seu programa terá que classificar. Os exemplos, no entanto, não foram classificados previamente. Que tipo de algoritmo você usaria para gerar um modelo para essa base de dados?
+
+    Agrupamento
+    Classificação single label
+    Regressão
+    Classificação multi label
+
+Pergunta 03: Suponha que você gerou uma curva de validação para testar o desempenho do seu algoritmo. Na curva, você comparou o desempenho do seu modelo com o desempenho do algoritmo na validação cruzada. O resultado exibiu a sua curva acima da curva da validação cruzada, ou seja, com desempenho bem melhor, e as curvas não convergiram. O que isso significa?
+
+    Baixa variância
+    O modelo está bom para ir para produção
+    Underfitting
+    Overfitting
+
+Pergunta 04: Para este tipo de problema, seu contratante te diz que é preferível que o algoritmo “erre sempre da mesma maneira” do que ele “erre de maneira errática”. Isso se dá porque, na etapa de conferência manual dos resultados incorretos, erros “previsíveis” são corrigidos de forma mais barata. Que característica seria desejável seu algoritmo ter para que ele tivesse esse tipo de comportamento?
+
+    Alta tendência e alta variância
+    Alta tendência e baixa variância
+    Baixa tendência e alta variância
+    Baixa tendência e baixa variância
+
+Pergunta 05: Suponha que, após um ano com o seu algoritmo em execução, você perceba que os valores dos cheques tendem a ter magnitudes diferentes em diferentes épocas do ano. No final do ano, por exemplo, o normal é a maior parte dos cheques ter seis ou oito dígitos, considerando os centavos, enquanto no meio do ano a quantidade de dígitos é um tanto menor. Se você souber dessa tendência com antecedência, sua empresa poderá ajustar a etapa de conferência manual de dígitos errados, gerando economia de custos.
+
+Assim, você coleta de dados de “quantidade média de dígitos nos valores dos cheques” por “mês/ano”. Que técnica de aprendizado de máquina você usaria para tentar analisar esse comportamento e fazer previsões acerca dos meses futuros?
+
+    F-Score
+    Erro mediano absoluto
+    Acurácia
+    Erro médio quadrático
+
+Pergunta 06: Suponha que seu cliente te enviou 2100 números classificados previamente para alimentar o treino do seu algoritmo. Você gera seu modelo. Um tempo depois, seu cliente pergunta se você precisa de mais dados. A obtenção desses dados acarretará em custos maiores, portanto não deve ser feita a não ser que vá trazer benefícios reais para seu algoritmo. Como você poderia descobrir se vale a pena trazer mais dados para o seu algoritmo?
+
+    Usando curvas de aprendizado
+    Usando validação cruzada
+    Usando otimização de hiperparâmetros
+    Nenhuma alternativa é a correta
+
+Pergunta 07: A técnica de validação cruzada “deixar P elementos de fora”, para o problema sob análise, seria uma boa escolha? Justifique sua resposta.
+
+    Sim - ela é a mais precisa e, portanto, vai nos dar maior confiabilidade
+    Não - ela não trará resultados melhores que a K-Grupos.
+    Sim - ela é a mais adequada para modelos de classificação
+    Não - ela é computacionalmente cara demais para ser viável
+
+Pergunta 08: Suponha que, num agrupamento para aquele conjunto de dados, teve-se valor elevado de entropia. O que isso melhor quer dizer em relação às imagens usadas no treino?
+
+    Precisamos, necessariamente, de mais imagens.
+    As imagens estão se confundido umas com a outras. 1 com 7, por exemplo.
+    O modelo está com desempenho inaceitável para as imagens escolhidas
+    As imagens estão bem separadas e o modelo está bom para ir para produção
+
+Pergunta 09: Suponha que você tenha usado um classificador multilabel para resolver o seu problema. Marque a alternativa correta.
+
+    A perda de hamming é a métrica de qualidade mais adequada aqui.
+    Não é possível modelar o problema como um classificador multilabel, pois só há dois resultados possíveis: cheque correto (positivo) e cheque errado (negativo)
+    A perda 0-1 é a métrica de qualidade mais adequada aqui.
+    Ambas a perda 0-1 e a perda de hamming são igualmente adequadas para resolver o problema.
+
+Pergunta 10: Qual técnica de validação cruzada você usaria para resolver o seu problema?
+
+    A divisão de treino e teste - nessa escala de problema, é a única viável
+    Deixar P elementos de fora - ela é a mais precisa e, portanto, vai nos dar maior confiabilidade
+    A divisão de treino e teste - a perda de dados é aceitável para esse problema
+    A validação cruzada em k-grupos - é boa mas não é tão cara computacionalmente
+
+Pergunta 11: Considere a seguinte matriz de confusão de um teste para as classificações dos números 1 a 4. São 300 exemplos de cada número. Calcule a acurácia para cada número
+
+title
+
+    Para 1 a 4, respectivamente: 0.834, 0.758, 0.817, 0.9084
+    Para 1 a 4, respectivamente: 0.9584, 0.758, 0.723, 0.814
+    Para 1 a 4, respectivamente: 0.758, 0.912, 0.817, 0.834
+    Para 1 a 4, respectivamente: 0.9084, 0.758, 0.817, 0.834
+
+Pergunta 12: Considere a seguinte matriz de confusão de um teste para as classificações dos números 1 a 4. São 300 exemplos de cada número. Calcule a precisão para cada número.
+
+title
+
+    Para 1 a 4, respectivamente: 0.80, 0.42, 0.625, 0.86
+    Para 1 a 4, respectivamente: 0.85, 0.42, 0.625, 0.656
+    Para 1 a 4, respectivamente: 0.85, 0.52, 0.625, 0.656
+    Para 1 a 4, respectivamente: 0.80, 0.52, 0.625, 0.86
+
+Pergunta 13: Considere a seguinte matriz de confusão de um teste para as classificações dos números 1 a 4. São 300 exemplos de cada número. Calcule o recall para cada número.
+
+title
+
+    Para 1 a 4, respectivamente: 0.77, 0.55, 0.66, 0.60
+    Para 1 a 4, respectivamente: 0.72, 0.55, 0.66, 0.60
+    Para 1 a 4, respectivamente: 0.77, 0.50, 0.66, 0.70
+    Para 1 a 4, respectivamente: 0.72, 0.50, 0.66, 0.70
+
+Pergunta 14: Na técnica de validação cruzada “divisão 70-30”
+
+    A divisão dos dados deve ser, sempre, 30% para treino e 70% para teste.
+    A divisão dos dados deve ser, sempre, 70% para treino e 30% para teste.
+    Não há regra sobre qual proporção dos dados deve ir para treino e teste.
+    Nenhuma das alternativas está correta.
+
+Pergunta 15: O problema descrito melhor se classifica como um problema de…
+
+    Classificação multi label
+    Classificação single label
+    Regressão
+    Classificação single ou multi label, a depender da modelagem
+
